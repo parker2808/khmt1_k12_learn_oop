@@ -1,2 +1,2 @@
 # OOP
-LTH - OOP subject
+OOP subject
