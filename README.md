@@ -1,2 +1,2 @@
 # OOP
-welcome to my github - OOP subject
+Lập trình h - OOP subject
