@@ -1,2 +1,2 @@
 # OOP
-Lập trình h - OOP subject
+LTH - OOP subject
