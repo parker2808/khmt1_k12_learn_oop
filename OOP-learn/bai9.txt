@@ -1,0 +1,3 @@
+              MaHang             TenHang              DonGia          TrongLuong
+                   1                   a                   2                   3
+                   4                   b                   5                   6

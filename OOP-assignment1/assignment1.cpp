@@ -81,10 +81,10 @@ public:
         cout << "Ma phieu:        " << maPhieu << setw(25);    ngayLap.xuat();
         nhaCC.xuat();   cout << endl;
         cout << setw(15) << "Ma SP" << setw(15) << "Ten san pham" << setw(15) << "So luong" << setw(15) << "Don gia" << setw(15) << "Thanh tien" << endl;
-        int tong = 0;
+        float tong = 0;
         for(int i=0; i<n; i++){
             sanPham[i].xuat();
-            tong += sanPham[i].soLuong*sanPham[i].donGia;
+            tong += (float)sanPham[i].soLuong*sanPham[i].donGia;
         }
         cout << endl << setw(37) << "TONG" << setw(38) << tong << endl << endl;
         cout << setw(20) << "Hieu truong" << setw(25) << "Phong tai chinh" << setw(25) << "Nguoi lap" << endl << endl;
