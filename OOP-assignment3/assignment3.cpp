@@ -44,5 +44,10 @@ int main(){
     cout << "- Nhap phan so c" << endl;   cin >> c;
     cout << "- Nhap phan so d" << endl;   cin >> d;
     cout << "- Phep nhan: " << c << " x " << d << " = " << c*d << endl;
+    
+    ofstream f("PHANSO.txt", ios::out);
+    f << "Phep nhan: " << c << " x " << d << " = " << c*d << endl;
+    f.close();
+    cout << "- Xuat tep thanh cong, kiem tra tap tin PHANSO.txt" << endl;
     return 0;
 }
