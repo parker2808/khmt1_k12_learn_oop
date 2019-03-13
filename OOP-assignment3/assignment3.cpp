@@ -46,8 +46,16 @@ int main(){
     cout << "- Phep nhan: " << c << " x " << d << " = " << c*d << endl;
     
     ofstream f("PHANSO.txt", ios::out);
+    f << "Phuong thuc khoi tao: " << a << " x " << b << " = " << a*b << endl;
     f << "Phep nhan: " << c << " x " << d << " = " << c*d << endl;
     f.close();
     cout << "- Xuat tep thanh cong, kiem tra tap tin PHANSO.txt" << endl;
+    cout << "- Xuat tep PHANSO.txt len man hinh:" << endl;
+    ifstream f1("PHANSO.txt", ios::in);
+    char S[200];
+    while(!f1.eof()){
+        f1.getline(S, 200);
+        cout << S << endl;
+    }
     return 0;
 }
