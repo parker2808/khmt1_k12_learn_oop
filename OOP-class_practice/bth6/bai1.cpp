@@ -7,7 +7,7 @@ class PHANSO{
 public:
     PHANSO operator*(PHANSO y){
         PHANSO tg;
-        tg.tu = tu * y.mau;
+        tg.tu = tu * y.tu;
         tg.mau = mau * y.mau;
         return tg;
     }
