@@ -1,3 +1,55 @@
+
+UNIT 1: APPROACHING TO IT
+    1. What is your major?
+    2. What do you study in your major?
+    3. What kinds of job can you do after graduation?
+    4. What are your job duties?
+    5. Do you like your major? Why/ Why not?
+UNIT 2: INSIDE THE COMPUTER
+    1. What is its color, size, materials and brand?
+    2. What are key components of a computer?
+    3. What are the functions of each component?
+    4. What is the processor speed/hard drive capacity/memory size of your computer?
+UNIT 3: INPUT AND OUTPUT DEVICES
+    1. What is its shape? What is it made of? (size, shape, materials)
+    2. What are its specifications, functions and key features? (dimensions, weight, resolution, OS compatibility, component, capability,…)
+    3. What are its advantages and disadvantages?
+    4. Why do you like it? (compare with other products)
+UNIT 4: Storage devices
+    1. What storage device do you like most?
+    2. How much memory does it have?
+    3. What are its advantages and disadvantages?
+    4. Why do you like it (compare with other storage devices)?
+UNIT 5: SYSTEM SOFTWARE
+    1. What is the operating system?
+    2. Which platform was it most used for? (mobile, home computer, server network)
+    3. Which company developed it?
+    4. When was it developed and became popular?
+    5. What kind of user interface does it use?
+    6. How do you feel when using it?
+UNIT 6: PROGRAMMING SOFTWARE
+    1. How many types of computer languages are there?
+    2. What computer language do you know best?
+    3. By whom was it developed?
+    4. When was it developed?
+    5. What is it used for?
+UNIT 7: NETWORKING
+Write advantages or disadvantages of network.
+    1. Advantages: 
+    • Allow data to be shared
+    • Users can share software on the servers
+    2. Disadvantages:
+    • Permits viruses to spread quickly
+    • Server failure means no one can work
+UNIT 8: Technical reports
+Write a report based on completed notes.
+    1. Date of call
+    2. Time commenced
+    3. Problem
+    4. Fault diagnosis
+    5. Advice
+
+
 UNIT 1: APPROACHING TO IT
 My name is Hung, I’m second year student and study Computer Science at Ha Noi University of Industry. Computer Science is a major that studies computer and computational systems, both hardware and software. We have to study a lot of subjects about my major such as: Computer Programming, Basic Language, Calculus and Discrete math, …
 There are many different job for the Computer Science major. For example: Software Developer, Database Administrator, Computer Hardware engineer, … After graduation, I hope that I can work for a big company. So, software engineer is a job I want to do. This is my simple dream. I will take responsible for writing code, testing code and developing system.
