@@ -45,7 +45,10 @@ public:
         cin.ignore(1);
     }
     void xuat(){
-        cout << setw(20) << tenH << setw(10) << soLg << setw(10) << donGia;
+        cout << setw(20) << tenH << setw(15) << soLg << setw(15) << donGia;
+    }
+    long getTt(){
+      return soLg*donGia;
     }
     friend class phieuGiao;
 };
@@ -73,7 +76,7 @@ public:
             if(5<=khoangCach && khoangCach <=15)    phiGiao = 50000;
             else    phiGiao = 100000;
         }
-        return hang.donGia * hang.soLg + phiGiao;
+        return hang.getTt() + phiGiao;
     }
     void xuat(){
         cout << "Ma phieu: " << maPhieu << endl;
@@ -82,7 +85,7 @@ public:
         cout << endl << setw(20) << "HoTenShiper" << setw(20) << "SDTShiper" << setw(20) << "TenHang" << setw(15) << "SoLuong" << setw(15) << "DonGia" << setw(20) << "KhoangCach" << endl;
         shiper.xuat();
         hang.xuat();
-        cout << setw(10) << khoangCach << endl;
+        cout << setw(20) << khoangCach << endl;
     }
 };
 
