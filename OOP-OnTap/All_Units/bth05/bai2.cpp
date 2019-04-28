@@ -52,6 +52,7 @@ public:
     friend long tongThanhTienThang8(list a);
     friend long findMax(list x);
     friend void hienThiDonGiaMax(list x);
+    friend void sapXepGiamThanhTien(list x);
 };
 
 class list{
@@ -90,6 +91,7 @@ public:
     friend long tongThanhTienThang8(list a);
     friend long findMax(list x);
     friend void hienThiDonGiaMax(list x);
+    friend void sapXepGiamThanhTien(list x);
 };
 
 long tongThanhTienThang8(list x){
@@ -121,22 +123,27 @@ void hienThiDonGiaMax(list x){
     }
 }
 
-void swap(hangHoa &a, hangHoa &b){
-    hangHoa tg = a;
+void swap(list &a, list &b){
+    list tg = a;
     a = b;
     b = tg;
 }
 
 void sapXepGiamThanhTien(list x){
-    
+    for(int i=1; i<x.n; i++){
+        for(int j=0; j<x.n-i; j++){
+            if(x.a[j].donGia*x.a[j].soLg < x.a[j+1].donGia*x.a[j+1].soLg)
+                swap(x.a[j], x.a[j+1]);
+        }
+    }
 }
 
 int main(){
     list a;
-    cout << endl << setw(50) << "---- Danh sach mat hang vua nhap ----" << endl;    a.xuat();
+    cout << endl << setw(70) << "---- Danh sach mat hang vua nhap ----" << endl;    a.xuat();
     cout << "- Tong thanh tien cac mat hang duoc nhap vao thang 8 nam 2017 la: " << tongThanhTienThang8(a) << endl;
     cout << "- Danh sach cac mat hang co don gia cao nhat" << endl; hienThiDonGiaMax(a);
-
-    a.~list();
+    cout << "- Danh sach cac mat hang sap xep giam dan theo thanh tien" << endl;    sapXepGiamThanhTien(a); a.xuat();
+    //a.~list(); //double free khong biet fix nen comment lai cho chac :)))
     return 0;
 }

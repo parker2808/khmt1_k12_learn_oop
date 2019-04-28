@@ -108,7 +108,7 @@ void hienThiDonGiaCaoNhat(list x){
     }
 }
 
-void swap(list a, list b){
+void swap(list &a, list &b){
     list tg = a;
     a = b;
     b = tg;
@@ -129,8 +129,7 @@ int main(){
     cout << endl << "Tong thanh tien cac hang hoa nhap thang 8 nam 2017 la: " << tongThanhTienThang8(a) << endl;
     cout << endl << "Danh sach cac mat hang co don gia cao nhat" << endl;
     hienThiDonGiaCaoNhat(a);
-    cout << endl << "Danh sach hang hoa sau khi sap xep theo chieu giam dan cua thanh tien" << endl;
-    sapXepGiam(a);
+    cout << endl << "Danh sach hang hoa sau khi sap xep theo chieu giam dan cua thanh tien" << endl;    sapXepGiam(a);
     a.xuat();
     return 0;
 }
