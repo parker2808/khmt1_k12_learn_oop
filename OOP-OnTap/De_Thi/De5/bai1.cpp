@@ -66,12 +66,15 @@ public:
 
 void xuatDs(list x){
     cout << "- Danh sach can bo nam co thu nhap tu 10 trieu tro len" << endl;
-    cout << setw(15) << "SoThe" << setw(15) << "HoTen" << setw(15) << "NamSinh" << setw(15) << "GioiTinh" << setw(15) << "HeSo" << setw(15) << "PhuCap" << setw(15) << "ThuNhap" << endl;
+    int dem = 0;
     for(int i=0; i<x.n; i++){
-        if(x.a[i].thuNhap >= 10000000 && strcpy(x.a[i].gioiTinh, "Nam")==0) x.a[i].xuat();
-        else{
-            cout << "==> Danh sach khong co thong tin can tim." << endl;
-            return;
+        if (x.a[i].thuNhap >= 10000000 && strcmp(x.a[i].gioiTinh, "Nam") == 0)  dem++;
+    }
+    if(dem==0)  cout << "=> Danh sach khong co thong tin can tim !" << endl;
+    else{
+        cout << setw(15) << "SoThe" << setw(15) << "HoTen" << setw(15) << "NamSinh" << setw(15) << "GioiTinh" << setw(15) << "HeSo" << setw(15) << "PhuCap" << setw(15) << "ThuNhap" << endl;
+        for (int i = 0; i < x.n; i++){
+        if (x.a[i].thuNhap >= 10000000 && strcmp(x.a[i].gioiTinh, "Nam") == 0)  x.a[i].xuat();
         }
     }
 }

@@ -85,31 +85,20 @@ public:
             a[i].nhap();
         }
     }
-    /*bool kiemTra(){
-        bool check;
-        for(int i=0; i<n; i++){
-            if(a[i].giaTien == 20000000 && a[i].ngayDk.nam == 2016){
-                return true;
-            }
-        }
-        return false;
-    }*/
     void xuat(){
         cout << setw(40) << "-- Danh sach xe may --" << endl;
         cout << "- Danh sach cac xe may dang ky nam 2016 va tren 20 trieu" << endl;
-        bool check = false;
+        int dem=0;
         for(int i=0; i<n; i++){
-            if (a[i].giaTien == 20000000 && a[i].ngayDk.nam == 2016){
-                check = true;
-                break;
-            }
+            if(a[i].ngayDk.nam == 2016 && a[i].giaTien >= 20000000) dem++;
         }
-        if(check){
+        if(dem==0)  cout << "Khong co xe thoa man dieu kien tren!" << endl;
+        else{
             cout << setw(15) << "HoTen" << setw(15) << "BienSo" << setw(20) << "NoiDK" << setw(24) << "NgayDK" << setw(15) << "GiaTien" << setw(15) << "MauSon" << endl;
             for(int i=0; i<n; i++){
-                if (a[i].giaTien == 20000000 && a[i].ngayDk.nam == 2016)    a[i].xuat();
+                if (a[i].ngayDk.nam == 2016 && a[i].giaTien >= 20000000)    a[i].xuat();
             }
-        } else  cout << "Thong tin khong ton tai!" << endl;
+        }
     }
 };
 

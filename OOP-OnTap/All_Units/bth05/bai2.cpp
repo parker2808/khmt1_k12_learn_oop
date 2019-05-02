@@ -123,8 +123,8 @@ void hienThiDonGiaMax(list x){
     }
 }
 
-void swap(list &a, list &b){
-    list tg = a;
+void swap(hangHoa &a, hangHoa &b){
+    hangHoa tg = a;
     a = b;
     b = tg;
 }
