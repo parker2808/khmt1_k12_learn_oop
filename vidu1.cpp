@@ -7,11 +7,12 @@ class quanLy;
 class chuyenVien;
 class congTacVien;
 class nhanVien{
+protected:
     char ten[10];
     int tuoi;
     char maSo[10];
     int ngayCong;
-protected:
+public:
     void nhap(){
         cout << "Ten: ";        cin.getline(ten, 10);
         cout << "Tuoi: ";       cin >> tuoi;
@@ -51,7 +52,11 @@ public:
         }
         cout << endl;
     }
+    int getNgayCong(){
+      return nhanVien::ngayCong;
+    }
     friend int soLuongNhanVien(quanLy a, chuyenVien b, congTacVien c);
+    friend void timMaxNgayCong(quanLy a, chuyenVien b, congTacVien c);
 };
 
 class chuyenVien : nhanVien{
@@ -83,7 +88,11 @@ public:
         }
         cout << endl;
     }
+    int getNgayCong(){
+      return nhanVien::ngayCong;
+    }
     friend int soLuongNhanVien(quanLy a, chuyenVien b, congTacVien c);
+    friend void timMaxNgayCong(quanLy a, chuyenVien b, congTacVien c);
 };
 
 class congTacVien : nhanVien{
@@ -110,11 +119,27 @@ public:
             cout << setw(15) << kieuCV << endl;
         }
     }
+    int getNgayCong(){
+      return nhanVien::ngayCong;
+    }
     friend int soLuongNhanVien(quanLy a, chuyenVien b, congTacVien c);
+    friend void timMaxNgayCong(quanLy a, chuyenVien b, congTacVien c);
 };
 
 int soLuongNhanVien(quanLy a, chuyenVien b, congTacVien c){
     return a.n + b.n + c.n;
+}
+
+void timMaxNgayCong(quanLy a, chuyenVien b, congTacVien c){
+  if(a.getNgayCong()>b.getNgayCong() && a.getNgayCong()>c.getNgayCong()){
+    cout << "Nhan vien la quan ly co so ngay cong cao nhat." << endl;
+  } else{
+    if(b.getNgayCong()>a.getNgayCong() && b.getNgayCong()>c.getNgayCong()){
+      cout << "Nhan vien la chuyen vien co so ngay cong cao nhat." << endl;
+    } else{
+      cout << "Nhan vien la cong tac vien co so ngay cong cao nhat." << endl;
+    }
+  }
 }
 
 int main(){
@@ -124,5 +149,6 @@ int main(){
     a.nhap();   b.nhap();   c.nhap();
     a.xuat();   b.xuat();   c.xuat();
     cout << "- So luong nhan vien cong ty quan ly la: " << soLuongNhanVien(a, b, c) << endl;
+    cout << "- Tim nhan vien co so ngay cong cao nhat: "; timMaxNgayCong(a, b, c);
     return 0;
 }
